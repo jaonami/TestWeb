@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var links = document.querySelectorAll('a');
+            links.forEach(function(link) {
+                link.setAttribute('target', '_blank');
+            });
+        });
+    </script>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Itim', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังที่จาง */
+            border-radius: 10px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h1, h2, p {
+            transition: transform 0.3s ease; /* เพิ่มเอฟเฟคการเปลี่ยนแปลง */
+        }
+
+        h1:hover, h2:hover, p:hover {
+            transform: scale(1.1); /* ขยายขนาดข้อความขึ้น 10% เมื่อชี้เมาส์ */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .icon {
+            width: 30px; /* ขนาดของไอคอน */
+            height: 30px; /* ขนาดของไอคอน */
+            margin-right: 10px; /* ช่องว่างระหว่างไอคอนและข้อความ */
+            vertical-align: middle; /* จัดแนวไอคอนให้ตรงกลาง */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="jpg/bay.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>My Profile</h1>
+        <h2>ประวัติส่วนตัวคราวๆ</h2>
+        <p>ชื่อ นายชันสนันท์ สีฟ้า</p>
+        <p>ชื่อเล่น เบย์</p>
+        <p>อายุ 18 ปี</p>
+        <p>เป็นคนชัยภูมิแต่กำเนิด</p>
+        <p>งานอดิเรก ออกกำลังกาย ฟังเพลง เล่นเกม ทำอาหาร</p>
+        <p>ช่องทางติดต่อด้านล่างเลย👇</p>
+        <div class="link-container">
+            <ul>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
+                    <a href="https://www.facebook.com/baystickyrice">Facebook</a>
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+                    <a href="https://www.instagram.com/i_baychnsfa/">Instagram</a>
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="icon">
+                    <a href="https://www.youtube.com/@Ramizy123">YouTube</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

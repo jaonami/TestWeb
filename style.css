@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Itim'; /* เปลี่ยนเป็นชื่อฟอนต์ที่คุณตั้ง */
+    src: url('fonts/Itim-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Itim', sans-serif;
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* ขยับขึ้น 5px */
+    }
+    100% {
+        transform: translateY(0); /* กลับลงที่ตำแหน่งเดิม */
+    }
+}
+
+.container {
+    max-width: 400px; /* ความกว้างสูงสุด */
+    margin: 50px auto; /* จัดกลางหน้าจอ */
+    padding: 30px; /* เพิ่ม padding เพื่อความสวยงาม */
+    background-color: rgba(245, 245, 245, 0.7); /* สีพื้นหลังขาวที่มีความโปร่งใส 70% */
+    border-radius: 20px; /* ทำให้มุมมนมากขึ้น */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงา */
+    backdrop-filter: blur(1px); /* เพิ่มเบลอให้กับพื้นหลัง */
+    text-align: center; /* จัดกลางข้อความ */
+    animation: bounce 3s infinite; /* ใช้ animation ที่สร้างขึ้น */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* เพิ่ม transition สำหรับเงาและขนาด */
+}
+
+.container:hover {
+    box-shadow: 0 0 20px rgba(212, 245, 255, 0.8), 0 0 30px rgba(212, 245, 255, 0.5); /* เงาที่เรืองแสงเมื่อเมาส์เลื่อนมาที่กรอบ */
+    transform: scale(1.05); /* ขยายขนาดกรอบขึ้น 5% เมื่อชี้เมาส์ */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+    margin-bottom: 1px;
+    overflow: hidden; /* ทำให้รูปภาพยังคงอยู่ในกรอบวงกลม */
+    transition: transform 0.3s ease; /* เพิ่ม transition สำหรับเอฟเฟกต์การซูม */
+}
+
+.profile-pic:hover {
+    transform: scale(1.2); /* ซูมขนาดรูปภาพขึ้น 1.2 เท่าเมื่อชี้เมาส์ */
+}
+
+h1 {
+    font-size: 24px; /* ขนาดหัวเรื่อง */
+    margin-bottom: 10px; /* ช่องว่างด้านล่าง */
+}
+
+h2 {
+    font-size: 18px; /* ขนาดหัวข้อรอง */
+    color: #000000; /* สีของหัวข้อรอง */
+}
+
+p {
+    font-size: 16px; /* ขนาดข้อความ */
+    color: #000000; /* สีข้อความ */
+}
+
+.link-container {
+    margin-top: 20px; /* ช่องว่างด้านบน */
+}
+
+ul {
+    list-style: none; /* ไม่แสดงจุด */
+    padding: 0; /* ลบการเยื้อง */
+    margin: 20px 0; /* เพิ่ม margin ด้านบนและล่าง */
+}
+
+li {
+    margin: 25px 0; /* เพิ่มช่องว่างระหว่างรายการให้มากขึ้น */
+    display: flex; /* ใช้ flexbox เพื่อจัดแนวไอคอนและข้อความ */
+    align-items: center; /* จัดแนวให้กลางในแนวตั้ง */
+    justify-content: center; /* จัดแนวให้กลางในแนวนอน */
+    padding: 10px; /* เพิ่มช่องว่างภายในรายการ */
+    border: 1px solid #ddd; /* เพิ่มกรอบรอบๆ */
+    border-radius: 10px; /* ทำมุมมนให้กับกรอบ */
+    background-color: rgba(255, 255, 255, 0.8); /* สีพื้นหลังที่โปร่งใส */
+    transition: background-color 0.3s, transform 0.3s; /* เพิ่ม transition สำหรับพื้นหลังและขนาด */
+}
+
+li:hover {
+    background-color: rgb(255, 255, 255); /* สีพื้นหลังเมื่อชี้เมาส์ */
+    transform: scale(1.05); /* ขยายขนาดรายการขึ้น 5% เมื่อชี้เมาส์ */
+}
+
+.icon {
+    width: 30px; /* ขนาดของไอคอน */
+    height: 30px; /* ขนาดของไอคอน */
+    margin-right: 10px; /* ช่องว่างระหว่างไอคอนและข้อความ */
+}
+
+a {
+    text-decoration: none; /* ไม่ให้ขีดเส้นใต้ */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    color: #000000; /* สีตัวอักษร */
+    transition: color 0.3s, transform 0.3s; /* เพิ่ม transition สำหรับสีและขนาด */
+}
+
+a:hover {
+    color: #000000; /* เปลี่ยนสีเมื่อชี้เมาส์ */
+    transform: scale(1.1); /* ขยายขนาดลิงก์ขึ้น 10% เมื่อชี้เมาส์ */
+}
+
+html, body {
+    height: 100%; /* ให้แน่ใจว่าร่างของหน้าเว็บเต็มความสูง */
+    margin: 0; /* ลบ margin เพื่อไม่ให้เกิดช่องว่าง */
+}
+
+body {
+    font-family: 'Itim', sans-serif;
+    background-image: url('https://media1.tenor.com/m/8d-ueVpIfNwAAAAd/demon-slayer.gif'); /* กำหนดที่อยู่ของรูปภาพ */
+    background-size: cover; /* ทำให้รูปภาพเต็มหน้าจอ */
+    background-position: center; /* จัดกลางรูปภาพ */
+    background-repeat: no-repeat; /* ไม่ให้รูปภาพซ้ำ */
+}
+
+h1, h2, p {
+    transition: transform 0.3s ease; /* เพิ่มเอฟเฟคการเปลี่ยนแปลง */
+}
+
+h1:hover, h2:hover, p:hover {
+    transform: scale(1.1); /* ขยายขนาดข้อความขึ้น 10% เมื่อชี้เมาส์ */
+}
